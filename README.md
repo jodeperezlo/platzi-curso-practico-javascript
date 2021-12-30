@@ -1,8 +1,8 @@
 # Platzi Curso Práctico de Javascript 💚
 
-> Curso práctico de JavaScript impartido en Platzi.
+> Curso práctico de JavaScript en Platzi.
 
-## Taller 1: Figuras geométricas.
+## Taller 1: Figuras geométricas. 📐🟩🟢
 
 - Primer paso: definir las fórmulas
 - Segundo paso: implementar las fórmulas en JavaScript

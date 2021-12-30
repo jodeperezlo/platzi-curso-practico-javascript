@@ -1,39 +1,255 @@
 <!--
  Copyright (c) 2021 Jorge de Jesus Perez Lopez
- 
+
  This software is released under the MIT License.
  https://opensource.org/licenses/MIT
 -->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
-  </head>
-  <body>
-    <header>
-      <h1>Figuras geométricas</h1>
-      <p>Este es el primer taller del curso práctico de JavaScript</p>
-    </header>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
+		<link rel="stylesheet" href="figuras.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Poppins:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Figuras geométricas 🟩🟢📐📐</h1>
+				<p>Este es el primer taller del curso práctico de JavaScript 💚</p>
+			</header>
 
-    <section>
-      <h2>Calcula el área y perímetro de un cuadrado</h2>
-      <form>
-        <label for="InputCuadrado">
-          Escribe cuánto mide cada lado de tu cuadrado:
-        </label>
-        <input id="InputCuadrado" type="number" />
-        <button type="button" onclick="calcularPerimetroCuadrado()">
-          Calcular el perímetro
-        </button>
-        <button type="button" onclick="calcularAreaCuadrado()">
-          Calcular el área
-        </button>
-      </form>
-    </section>
+			<div class="card-container">
+				<section class="card">
+					<h3>🔳 Calcula el área y perímetro de un cuadrado</h3>
+					<form class="form">
+						<label for="InputCuadrado">
+							Escribe cuánto mide el lado de tu cuadrado:
+						</label>
+						<input value="0" class="input" id="InputCuadrado" type="number" />
+						<div class="actions">
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculatePerimeterSquare()"
+							>
+								Calcula el perímetro
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculateAreaSquare()"
+							>
+								Calcula el área
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculateBothSquare()"
+							>
+								Calcula ambos
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="cleanSquareField()"
+							>
+								Limpiar campos
+							</button>
+						</div>
+						<div class="result">
+							<p id="resultPerimeterSquare"></p>
+							<p id="resultAreaSquare"></p>
+						</div>
+					</form>
+				</section>
 
-    <script src="./figuras.js"></script>
-  </body>
+				<section class="card">
+					<h3>⚪ Calcula el área y perímetro de un círculo</h3>
+					<form class="form">
+						<label for="InputCircle">
+							Escribe cuánto mide el radio de tu círculo:
+						</label>
+						<input value="0" class="input" id="InputCircle" type="number" />
+						<div class="actions">
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculatePerimeterCircle()"
+							>
+								Calcula el perímetro
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculateAreaCircle()"
+							>
+								Calcula el área
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculateBothCircle()"
+							>
+								Calcula ambos
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="cleanCircleField()"
+							>
+								Limpiar campos
+							</button>
+						</div>
+						<div class="result">
+							<p id="resultPerimeterCircle" class="result"></p>
+							<p id="resultAreaCircle" class="result"></p>
+						</div>
+					</form>
+				</section>
+
+				<section class="card">
+					<h3>🔼 Calcula el área y perímetro de un triángulo isósceles</h3>
+					<form class="form">
+						<label for="InputEqualsSidesTriangle">
+							Escribe el valor de los dos lados iguales:
+						</label>
+						<input
+							value="0"
+							class="input"
+							id="InputEqualsSidesTriangle"
+							type="number"
+						/>
+						<label for="InputBaseTriangleIso">
+							Escribe el valor de la base del triángulo:
+						</label>
+						<input
+							value="0"
+							class="input"
+							id="InputBaseTriangleIso"
+							type="number"
+						/>
+						<div class="actions">
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculatePerimeterTriangleIso()"
+							>
+								Calcula el perímetro
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculateAreaTriangleIso()"
+							>
+								Calcula el área
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculateBothTriangleIso()"
+							>
+								Calcula ambos
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="cleanTriangleIsoFields()"
+							>
+								Limpiar campos
+							</button>
+						</div>
+						<div class="result">
+							<p id="resultPerimeterTriangleIso" class="result"></p>
+							<p id="resultAreaTriangleIso" class="result"></p>
+						</div>
+					</form>
+				</section>
+
+				<section class="card">
+					<h3>🔼 Calcula el área y perímetro de un triángulo</h3>
+					<form class="form">
+						<label for="InputSideOneTriangle">
+							Escribe el valor del primer lado:
+						</label>
+						<input
+							value="0"
+							class="input"
+							id="InputSideOneTriangle"
+							type="number"
+						/>
+						<label for="InputSideTwoTriangle">
+							Escribe el valor del segundo lado:
+						</label>
+						<input
+							value="0"
+							class="input"
+							id="InputSideTwoTriangle"
+							type="number"
+						/>
+						<label for="InputBaseTriangle">
+							Escribe el valor de la base:
+						</label>
+						<input
+							value="0"
+							class="input"
+							id="InputBaseTriangle"
+							type="number"
+						/>
+						<label for="InputHeightTriangle">
+							Escribe el valor de su altura:
+						</label>
+						<input
+							value="0"
+							class="input"
+							id="InputHeightTriangle"
+							type="number"
+						/>
+						<div class="actions">
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculatePerimeterTriangle()"
+							>
+								Calcula el perímetro
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculateAreaTriangle()"
+							>
+								Calcula el área
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="calculateBothTriangle()"
+							>
+								Calcula ambos
+							</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="cleanTriangleFields()"
+							>
+								Limpiar campos
+							</button>
+						</div>
+						<div class="result">
+							<p id="resultPerimeterTriangle" class="result"></p>
+							<p id="resultAreaTriangle" class="result"></p>
+						</div>
+					</form>
+				</section>
+			</div>
+		</div>
+		<script src="./figuras.js"></script>
+	</body>
 </html>
