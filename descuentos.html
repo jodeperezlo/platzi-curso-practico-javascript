@@ -6,15 +6,13 @@
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>
-			Descuentos y Porcentajes | Curso Práctico de JavaScript en Platzi
-		</title>
-		<link rel="stylesheet" href="./descuentos.css" />
+		<title>Descuentos y Porcentajes | Curso Práctico de JavaScript en Platzi</title>
+		<link rel="stylesheet" href="./styles.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -23,7 +21,67 @@
 		/>
 	</head>
 	<body>
-		<div class="container"></div>
+		<nav class="nav">
+			<ul class="nav_links">
+				<li class="nav__logo">
+					<a href="./figuras.html">
+						<img
+							src="https://static.platzi.com/media/achievements/badge3-practico-javascript-d081180f-b158-446b-a34e-e658111a3680.png"
+							alt="Platzi"
+						/>
+					</a>
+				</li>
+				<li class="nav__link">
+					<a href="./figuras.html">Figuras</a>
+				</li>
+				<li class="nav__link">
+					<a href="./descuentos.html">Descuentos</a>
+				</li>
+				<li class="nav__link">
+					<a href="./mediana.html">Mediana</a>
+				</li>
+			</ul>
+		</nav>
+		<header class="container">
+			<h1>Descuentos y Porcentajes 🧮🔢</h1>
+			<p>Este es el segundo taller del Curso Práctico de Javascript de Platzi💚</p>
+		</header>
+		<section class="container">
+			<h2>📟 Calcula el precio a pagar</h2>
+			<p>Aplica el descuento a tus productos</p>
+
+			<div class="card">
+				<form class="form">
+					<label for="InputPrice">Escribe el precio del producto:</label>
+					<input class="input" min="0" value="0" type="number" id="InputPrice" />
+					<label for="InputDiscount">Escribe el porcentaje de descuento:</label>
+					<input class="input" min="0" value="0" type="number" id="InputDiscount" />
+					<label for="InputCoupon">También puedes ingresar algún cupón:</label>
+					<input class="input" type="text" id="InputCoupon" />
+					<div class="actions">
+						<button
+							class="btn btn-primary"
+							type="button"
+							id="btnCalculate"
+							onclick="handleCalculateDiscountPrice()"
+						>
+							Calcula el nuevo precio
+						</button>
+						<button
+							class="btn btn-primary"
+							type="button"
+							id="btnReset"
+							onclick="handleReset()"
+						>
+							Limpia los campos
+						</button>
+					</div>
+				</form>
+				<section class="result">
+					<p id="resultDiscountPrice" class="result"></p>
+				</section>
+			</div>
+		</section>
 		<script src="./descuentos.js"></script>
 	</body>
 </html>

@@ -11,7 +11,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Figuras geométricas | Curso Práctico de JavaScript en Platzi</title>
-		<link rel="stylesheet" href="./figuras.css" />
+		<link rel="stylesheet" href="./styles.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -20,10 +20,31 @@
 		/>
 	</head>
 	<body>
+		<nav class="nav">
+			<ul class="nav_links">
+				<li class="nav__logo">
+					<a href="./figuras.html">
+						<img
+							src="https://static.platzi.com/media/achievements/badge3-practico-javascript-d081180f-b158-446b-a34e-e658111a3680.png"
+							alt="Platzi"
+						/>
+					</a>
+				</li>
+				<li class="nav__link">
+					<a href="./figuras.html">Figuras</a>
+				</li>
+				<li class="nav__link">
+					<a href="./descuentos.html">Descuentos</a>
+				</li>
+				<li class="nav__link">
+					<a href="./mediana.html">Mediana</a>
+				</li>
+			</ul>
+		</nav>
 		<div class="container">
 			<header>
-				<h1>Figuras geométricas 🟩🟢📐📐</h1>
-				<p>Este es el primer taller del curso práctico de JavaScript 💚</p>
+				<h1>Figuras geométricas 🟩🟢📐</h1>
+				<p>Este es el primer taller del curso práctico de JavaScript de Platzi💚</p>
 			</header>
 
 			<div class="card-container">
@@ -56,12 +77,8 @@
 							>
 								Calcula ambos
 							</button>
-							<button
-								class="btn btn-primary"
-								type="button"
-								onclick="cleanSquareField()"
-							>
-								Limpiar campos
+							<button class="btn btn-primary" type="button" onclick="cleanSquareField()">
+								Limpia los campos
 							</button>
 						</div>
 						<div class="result">
@@ -74,9 +91,7 @@
 				<section class="card">
 					<h3>⚪ Calcula el área y perímetro de un círculo</h3>
 					<form class="form">
-						<label for="InputCircle">
-							Escribe cuánto mide el radio de tu círculo:
-						</label>
+						<label for="InputCircle"> Escribe cuánto mide el radio de tu círculo: </label>
 						<input value="0" class="input" id="InputCircle" type="number" />
 						<div class="actions">
 							<button
@@ -100,12 +115,8 @@
 							>
 								Calcula ambos
 							</button>
-							<button
-								class="btn btn-primary"
-								type="button"
-								onclick="cleanCircleField()"
-							>
-								Limpiar campos
+							<button class="btn btn-primary" type="button" onclick="cleanCircleField()">
+								Limpia los campos
 							</button>
 						</div>
 						<div class="result">
@@ -121,21 +132,11 @@
 						<label for="InputEqualsSidesTriangle">
 							Escribe el valor de los dos lados iguales:
 						</label>
-						<input
-							value="0"
-							class="input"
-							id="InputEqualsSidesTriangle"
-							type="number"
-						/>
+						<input value="0" class="input" id="InputEqualsSidesTriangle" type="number" />
 						<label for="InputBaseTriangleIso">
 							Escribe el valor de la base del triángulo:
 						</label>
-						<input
-							value="0"
-							class="input"
-							id="InputBaseTriangleIso"
-							type="number"
-						/>
+						<input value="0" class="input" id="InputBaseTriangleIso" type="number" />
 						<div class="actions">
 							<button
 								class="btn btn-primary"
@@ -163,7 +164,7 @@
 								type="button"
 								onclick="cleanTriangleIsoFields()"
 							>
-								Limpiar campos
+								Limpia los campos
 							</button>
 						</div>
 						<div class="result">
@@ -176,42 +177,14 @@
 				<section class="card">
 					<h3>🔼 Calcula el área y perímetro de un triángulo</h3>
 					<form class="form">
-						<label for="InputSideOneTriangle">
-							Escribe el valor del primer lado:
-						</label>
-						<input
-							value="0"
-							class="input"
-							id="InputSideOneTriangle"
-							type="number"
-						/>
-						<label for="InputSideTwoTriangle">
-							Escribe el valor del segundo lado:
-						</label>
-						<input
-							value="0"
-							class="input"
-							id="InputSideTwoTriangle"
-							type="number"
-						/>
-						<label for="InputBaseTriangle">
-							Escribe el valor de la base:
-						</label>
-						<input
-							value="0"
-							class="input"
-							id="InputBaseTriangle"
-							type="number"
-						/>
-						<label for="InputHeightTriangle">
-							Escribe el valor de su altura:
-						</label>
-						<input
-							value="0"
-							class="input"
-							id="InputHeightTriangle"
-							type="number"
-						/>
+						<label for="InputSideOneTriangle"> Escribe el valor del primer lado: </label>
+						<input value="0" class="input" id="InputSideOneTriangle" type="number" />
+						<label for="InputSideTwoTriangle"> Escribe el valor del segundo lado: </label>
+						<input value="0" class="input" id="InputSideTwoTriangle" type="number" />
+						<label for="InputBaseTriangle"> Escribe el valor de la base: </label>
+						<input value="0" class="input" id="InputBaseTriangle" type="number" />
+						<label for="InputHeightTriangle"> Escribe el valor de su altura: </label>
+						<input value="0" class="input" id="InputHeightTriangle" type="number" />
 						<div class="actions">
 							<button
 								class="btn btn-primary"
@@ -239,7 +212,7 @@
 								type="button"
 								onclick="cleanTriangleFields()"
 							>
-								Limpiar campos
+								Limpia los campos
 							</button>
 						</div>
 						<div class="result">
